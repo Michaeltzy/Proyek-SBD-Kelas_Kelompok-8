@@ -17,32 +17,45 @@ Konfiguurasi file hadoop-env dengan menambahkan path yang sesuai untuk JAVA_HOME
 Konfigurasi file core-site.xml dengan menambahkan tulisan dibawah ini:
 
 
-![Image](https://github.com/Michaeltzy/jsleep-android/assets/88538611/ee2b9b32-d7c4-45b4-83bf-cfd4ddbef4f8)
+![Image](https://github.com/Michaeltzy/Proyek-SBD-Kelas_Kelompok-8/blob/main/Assets/image_1.jpg)
 
 
 Konfigurasi file hdfs-site.xml dengan menambahkan tulisan dibawah ini:
 
 
-![Image](https://github.com/Michaeltzy/jsleep-android/assets/88538611/207b48c2-1978-401c-9ac7-862144f523f1)
+![Image](https://github.com/Michaeltzy/Proyek-SBD-Kelas_Kelompok-8/blob/main/Assets/image_2.jpg)
 
 Konfigurasi file hdfs-site.xml sebelum mengkonfigurasikan file hdfs-site.xml dengan membuat sebuah folder data berisikan folder namenode dan datanode, serta menambahkan tulisan berikut:
 
 
-![Image](https://github.com/Michaeltzy/jsleep-android/assets/88538611/2193e6d8-4dfe-44b1-ad40-7c53cbe51744)
+![Image](https://github.com/Michaeltzy/Proyek-SBD-Kelas_Kelompok-8/blob/main/Assets/image_3.jpg)
 
 
 Konfigurasi file mapred-site.xml dengan menambahkan tulisan dibawah ini:
 
 
-![Image](https://github.com/Michaeltzy/jsleep-android/assets/88538611/e253a917-4371-4d76-8ee2-d0a50953f8d0)
+![Image](https://github.com/Michaeltzy/Proyek-SBD-Kelas_Kelompok-8/blob/main/Assets/image_4.jpg)
 
 
 Konfigurasi file yarn-site.xml dengan menambahkan tulisan dibawah ini:
 
 
-![Image](https://github.com/Michaeltzy/jsleep-android/assets/88538611/45dbad90-464b-4368-90c4-3492e3c94bf7)
+![Image](https://github.com/Michaeltzy/Proyek-SBD-Kelas_Kelompok-8/blob/main/Assets/image_5.jpg)
 
 
 Jalankan Hadoop dengan "start-all.cmd" sehingga node dapat berjalan
 
-Jalankan Perintah JPS sebagi akhir.
+
+Kemudian untuk menjalankan hadoop untuk tiap file gunakan
+```
+hdfs dfs -put (file-path) /(nama-folder)
+
+hadoop jar (file-path) wordcount /(nama-folder)/gutenberg-1G.txt /output/result-1G
+
+hdfs dfs -get /output/hd_wordcount/part-r-00000 (file-path-output)
+```
+
+Terakhir untuk mematikan hadoop jalankan
+stop-all.cmd
+
+
